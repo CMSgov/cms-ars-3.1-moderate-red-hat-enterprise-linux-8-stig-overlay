@@ -296,7 +296,21 @@ to have the required value):
 difok = 6"
   end
 	
+  control "SV-230360" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
+  end
 
+  control "SV-230361" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
+  end
+
+  control "SV-230362" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
+  end
+	
 control 'V-71933' do
 	title 'The Red Hat Enterprise Linux operating system must be configured so that passwords must be prohibited from reuse for a minimum of 6 generations.'
 	desc 'check', 'Verify the operating system prohibits password reuse for a minimum of 6 generations.
