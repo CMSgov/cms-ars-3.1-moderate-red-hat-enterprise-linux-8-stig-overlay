@@ -1,12 +1,138 @@
 # encoding: utf-8
 
 include_controls "redhat-enterprise-linux-8-stig-baseline" do
-  
-  control "V-71855" do
+
+  control "SV-230240" do
     impact 0.0
-    desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-  end 
-  
+    desc 'caveat', 'This is Not Applicable since the related security control (SC-3) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
+  control "SV-230241" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (SC-3) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
+  control "SV-230257" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (6)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230258" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (6)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230259" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (6)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230260" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (6)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230261" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (6)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230262" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (6)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230263" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-3 (5)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230267" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AC-3 (4)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230268" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AC-3 (4)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230271" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (IA-11) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230272" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (IA-11) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230277" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (SC-3) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
+  control "SV-230278" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (SC-3) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
+  control "SV-230279" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (SC-3) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
+  control "SV-230281" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (SI-2 (6)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230282" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (SI-6 a) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
+  control "SV-230296" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (IA-2 (5)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230376" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (IA-5 (13)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230386" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AC-6 (8)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230394" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230479" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230480" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230481" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
+  end
+
+  control "SV-230482" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
+  end
+
+
   control "V-71859" do
     title "The Red Hat Enterprise Linux operating system must display the Standard Mandatory CMS Banner before granting local or remote access to the system via a graphical user logon."
     desc "Display of a standardized and approved use notification before granting access to the operating system ensures privacy and security notification verbiage used is consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance.
@@ -170,20 +296,6 @@ to have the required value):
 difok = 6"
   end
 	
-control 'V-71913' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
-end 
-
-control 'V-71915' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
-end 
-
-control 'V-71917' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
-end 
 
 control 'V-71933' do
 	title 'The Red Hat Enterprise Linux operating system must be configured so that passwords must be prohibited from reuse for a minimum of 6 generations.'
@@ -330,15 +442,6 @@ control 'V-71945' do
 	  "
 	end
 
-control 'V-71947' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-71949' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
 
 control 'V-71951' do
 	desc "Configuring the operating system to implement organization-wide security implementation guides and security checklists verifies compliance with federal standards and establishes a common security baseline that reflects the most restrictive security posture consistent with operational requirements.
@@ -346,50 +449,6 @@ control 'V-71951' do
 Configuration settings are the set of parameters that can be changed in hardware, software, or firmware components of the system that affect the security posture and/or functionality of the system. Security-related parameters are those parameters impacting the security state of the system, including the parameters required to satisfy other security control requirements. Security-related parameters include, for example, registry settings; account, file, and directory permission settings; and settings for functions, ports, protocols, services, and remote connections."
 	end
 
-control 'V-71973' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-71975' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-71977' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
-
-control 'V-71979' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
-
-control 'V-71987' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-71989' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
-
-control 'V-71991' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
-
-control 'V-72007' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-72009' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
 
 control 'V-72067' do
 	desc 'check', 'Verify the operating system implements approved encryption to protect the confidentiality of remote access sessions.
@@ -460,40 +519,6 @@ To ensure the boot= configuration option will work even if device naming changes
 '
 	end	
 
-control 'V-72083' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-72085' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-72087' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-end
-
-control 'V-72089' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
-
-control 'V-72091' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
-
-control 'V-72093' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
-
-control 'V-72217' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not applied to this system categorization in CMS ARS 3.1'
-end
 
 control 'V-72221' do
 	desc "Unapproved mechanisms that are used for authentication to the cryptographic module are not verified and therefore cannot be relied upon to provide confidentiality or integrity, and CMS data may be compromised.
@@ -617,33 +642,5 @@ control 'V-72253' do
 	desc "Information systems are required to use FIPS 140-2 approved cryptographic hash functions. The only SSHv2 hash algorithm meeting this requirement is SHA."
 	end
 
-control 'V-73163' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-	end
 
-control 'V-81013' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-	end
-
-control 'V-81015' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-	end
-
-control 'V-81017' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-	end
-
-control 'V-81019' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-	end
-
-control 'V-81021' do
-	impact 0.0
-	desc 'caveat', 'This is Not Applicable since the related security control is not included in CMS ARS 3.1'
-	end
 end
