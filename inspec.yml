@@ -23,7 +23,7 @@ inputs:
 * By using this system, you understand and consent to the following:
 - The Government may monitor, record, and audit your system usage, including usage of personal devices and email systems for official duties or to conduct HHS business. Therefore, you have no reasonable expectation of privacy regarding any communication or data transiting or stored on this system. At any time, and for any lawful Government purpose, the government may monitor, intercept, and search and seize any communication or data transiting or stored on this system.
 - Any communication or data transiting or stored on this system may be disclosed or used for any lawful Government purpose"
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: banner_message_text_cli
   description: The bannermessage text for command line interface logins.
@@ -35,7 +35,7 @@ inputs:
 * By using this system, you understand and consent to the following:
 - The Government may monitor, record, and audit your system usage, including usage of personal devices and email systems for official duties or to conduct HHS business. Therefore, you have no reasonable expectation of privacy regarding any communication or data transiting or stored on this system. At any time, and for any lawful Government purpose, the government may monitor, intercept, and search and seize any communication or data transiting or stored on this system.
 - Any communication or data transiting or stored on this system may be disclosed or used for any lawful Government purpose"
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: banner_message_text_ral
   description: The banner message text for remote access logins.
@@ -47,71 +47,53 @@ inputs:
 * By using this system, you understand and consent to the following:
 - The Government may monitor, record, and audit your system usage, including usage of personal devices and email systems for official duties or to conduct HHS business. Therefore, you have no reasonable expectation of privacy regarding any communication or data transiting or stored on this system. At any time, and for any lawful Government purpose, the government may monitor, intercept, and search and seize any communication or data transiting or stored on this system.
 - Any communication or data transiting or stored on this system may be disclosed or used for any lawful Government purpose"
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: difok
-  description: DIFOK (minimum number of characters that must be different from previous password).
+  description: SV-230363 - DIFOK (minimum number of characters that must be different from previous password).
   type: numeric
   value: 6
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: min_reuse_generations
-  description: Number of reuse generations.
+  description: SV-230368 - Number of reuse generations.
   type: numeric
   value: 6
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: days_of_inactivity
-  description: Number of days of inactivity.
+  description: SV-230373 - Number of days of inactivity.
   type: numeric
   value: 60
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: unsuccessful_attempts
-  description: The number of unsuccessful login attempts within a certain interval before lockout.
+  description: SV-230332, SV-230333 - The number of unsuccessful login attempts within a certain interval before lockout.
   type: numeric
   value: 5
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: fail_interval
   description: The fail interval in seconds upon which an account will be locked if a certain number of unsuccessful login attempts is reached.
   type: numeric
   value: 7200
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
   
 - name: lockout_time 
   description: The time in seconds for how long an account will be locked out.
   type: numeric
   value: 3600
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
   
-- name: unsuccessful_attempts_root
-  description: The number of unsuccessful login attempts within a certain interval before lockout.
-  type: numeric
-  value: 5
-  profile: redhat-enterprise-linux-7-stig-baseline
-
-- name: fail_interval_root
-  description: The fail interval in seconds upon which an account will be locked if a certain number of unsuccessful login attempts is reached.
-  type: numeric
-  value: 7200
-  profile: redhat-enterprise-linux-7-stig-baseline
-  
-- name: lockout_time_root
-  description: The time in seconds for how long an account will be locked out.
-  type: numeric
-  value: 3600
-  profile: redhat-enterprise-linux-7-stig-baseline
-
 - name: system_inactivity_timeout
   description: System inactivity timeout in seconds
   type: numeric
   value: 1800
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
 - name: client_alive_interval 
   description: Client alive interval in seconds
   type: numeric
   value: 1800
-  profile: redhat-enterprise-linux-7-stig-baseline
+  profile: redhat-enterprise-linux-8-stig-baseline
 
