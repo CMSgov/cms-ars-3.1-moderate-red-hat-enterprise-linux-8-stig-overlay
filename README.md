@@ -1,4 +1,4 @@
-# (WIP) cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay
+# cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay
 InSpec profile overlay to validate the secure configuration of Red Hat Enterprise Linux 8 against [DISA's](https://public.cyber.mil/stigs/) Red Hat Enterprise Linux 8 STIG Version 1 Release 3 tailored for [CMS ARS 3.1](https://www.cms.gov/Research-Statistics-Data-and-Systems/CMS-Information-Technology/InformationSecurity/Info-Security-Library-Items/ARS-31-Publication.html) for CMS systems categorized as Moderate.
 
 ## Getting Started  
