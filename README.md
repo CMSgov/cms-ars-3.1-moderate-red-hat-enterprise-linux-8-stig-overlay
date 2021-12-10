@@ -134,17 +134,17 @@ virtual_machine: false
 
 Against a remote target using ssh with escalated privileges (i.e., cinc-auditor installed on a separate runner host)
 ```bash
-cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay/archive/master.tar.gz -t ssh://TARGET_USERNAME:TARGET_PASSWORD@TARGET_IP:TARGET_PORT --sudo --sudo-password=<SUDO_PASSWORD_IF_REQUIRED> --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json> 
+cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay/archive/main.tar.gz -t ssh://TARGET_USERNAME:TARGET_PASSWORD@TARGET_IP:TARGET_PORT --sudo --sudo-password=<SUDO_PASSWORD_IF_REQUIRED> --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json> 
 ```
 
 Against a remote target using a pem key with escalated privileges (i.e., cinc-auditor installed on a separate runner host)
 ```bash
-cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay/archive/master.tar.gz -t ssh://TARGET_USERNAME@TARGET_IP:TARGET_PORT --sudo -i <your_PEM_KEY> --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json>  
+cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay/archive/main.tar.gz -t ssh://TARGET_USERNAME@TARGET_IP:TARGET_PORT --sudo -i <your_PEM_KEY> --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json>  
 ```
 
 Against a local Red Hat host with escalated privileges (i.e., cinc-auditor installed on the target)
 ```bash
-sudo cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay/archive/master.tar.gz --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json> 
+sudo cinc-auditor exec https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay/archive/main.tar.gz --input-file <path_to_your_input_file/name_of_your_input_file.yml> --reporter json:<path_to_your_output_file/name_of_your_output_file.json> 
 ```
 ### Different Run Options
 
