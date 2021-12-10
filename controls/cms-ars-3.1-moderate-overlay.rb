@@ -644,7 +644,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     desc 'caveat', 'This is Not Applicable since the related security control (CM-3 (5)) is not included in CMS ARS 3.1'
   end
 
-	
 
 	control 'SV-230264' do
 		desc  "Changes to any software components can have significant effects on the
