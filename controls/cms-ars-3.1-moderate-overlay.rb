@@ -1400,6 +1400,22 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   end
 
 
+  control "SV-230360" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
+  end
+  
+  control "SV-230361" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
+  end
+  
+  control "SV-230362" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related requirement is not included in IA-5(1) in CMS ARS 3.1'
+  end
+  
+
   control 'SV-230363' do
     title "RHEL 8 must require the change of at least 6 characters when passwords
   are changed."
