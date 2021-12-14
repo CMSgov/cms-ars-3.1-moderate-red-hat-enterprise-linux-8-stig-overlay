@@ -10,7 +10,7 @@ inspec_version: ">= 4.0"
 
 depends:
 - name: redhat-enterprise-linux-8-stig-baseline
-  url: https://gitlab.dsolab.io/scv-content/inspec/operating-systems/redhat-enterprise-linux-8-stig-baseline/-/archive/2.0.2/redhat-enterprise-linux-8-stig-baseline-2.1.0.tar.gz
+  url: https://gitlab.dsolab.io/scv-content/inspec/operating-systems/redhat-enterprise-linux-8-stig-baseline/-/archive/2.1.0/redhat-enterprise-linux-8-stig-baseline-2.1.0.tar.gz
 
 inputs:
 - name: banner_message_text_gui
