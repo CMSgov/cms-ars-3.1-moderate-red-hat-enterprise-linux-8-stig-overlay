@@ -1362,6 +1362,10 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     "
   end
 
+  control "SV-230346" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AC-10) is not applied to this system categorization in CMS ARS 3.1'
+  end
 
   control 'SV-230353' do
     title "RHEL 8 must automatically lock command line user sessions after 30
