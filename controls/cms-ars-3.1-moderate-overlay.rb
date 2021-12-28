@@ -1066,7 +1066,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230334' do
     title "RHEL 8 must automatically lock an account when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc  'check', "
       Check that the system locks an account after five unsuccessful logon
   attempts within a period of 60 minutes with the following commands:
@@ -1123,7 +1123,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230335' do
     title "RHEL 8 must automatically lock an account when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc  'check', "
       Note: This check applies to RHEL versions 8.2 or newer, if the system is
   RHEL version 8.0 or 8.1, this check is not applicable.
@@ -1152,7 +1152,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230336' do
     title "RHEL 8 must automatically lock an account for 60 minutes when five unsuccessful logon attempts occur
-  during a 60-minute time period."
+  during a 120-minute time period."
     desc  'check', "
       Check that the system locks an account for 60 minutes after five unsuccessful logon
   attempts within a period of 60 minutes with
@@ -1208,7 +1208,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230337' do
     title "RHEL 8 must automatically lock an account for 60 minutes when five unsuccessful logon attempts occur
-  during a 60-minute time period."
+  during a 120-minute time period."
     desc  'check', "
       Note: This check applies to RHEL versions 8.2 or newer, if the system is
   RHEL version 8.0 or 8.1, this check is not applicable.
@@ -1296,7 +1296,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230344' do
     title "RHEL 8 must include root when automatically locking an account for 60 minutes when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc  'check', "
       Check that the system includes the root account when locking an account
   after five unsuccessful logon attempts within a period of 60 minutes with the
@@ -1350,7 +1350,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230345' do
     title "RHEL 8 must include root when automatically locking an account for 60 minutes when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc 'fix', "
       Configure the operating system to include root when locking an account
   after five unsuccessful logon attempts occur in 60 minutes.
