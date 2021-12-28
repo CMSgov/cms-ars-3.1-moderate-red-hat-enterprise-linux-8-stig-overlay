@@ -644,46 +644,20 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     desc 'caveat', 'This is Not Applicable since the related security control (CM-3 (5)) is not included in CMS ARS 3.1'
   end
 
-
-  control 'SV-230264' do
-    desc  "Changes to any software components can have significant effects on the
-  overall security of the operating system. This requirement ensures the software
-  has not been tampered with and that it has been provided by a trusted vendor.
-
-      Accordingly, patches, service packs, device drivers, or operating system
-  components must be signed with a certificate recognized and approved by the
-  organization.
-
-      Verifying the authenticity of the software prior to installation validates
-  the integrity of the patch or upgrade received from a vendor. This verifies the
-  software has not been tampered with and that it has been provided by a trusted
-  vendor. Self-signed certificates are disallowed by this requirement. The
-  operating system should not have to verify the software again. This requirement
-  does not mandate CMS certificates for this purpose; however, the certificate
-  used to verify the software must be from an approved CA.
-    "
+  control "SV-230264" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (3)) is not applied to this system categorization in CMS ARS 3.1'
   end
-
-
-  control 'SV-230265' do
-   desc  "Changes to any software components can have significant effects on the
-  overall security of the operating system. This requirement ensures the software
-  has not been tampered with and that it has been provided by a trusted vendor.
-
-      Accordingly, patches, service packs, device drivers, or operating system
-  components must be signed with a certificate recognized and approved by the
-  organization.
-
-      Verifying the authenticity of the software prior to installation validates
-  the integrity of the patch or upgrade received from a vendor. This verifies the
-  software has not been tampered with and that it has been provided by a trusted
-  vendor. Self-signed certificates are disallowed by this requirement. The
-  operating system should not have to verify the software again. This requirement
-  does not mandate CMS certificates for this purpose; however, the certificate
-  used to verify the software must be from an approved CA.
-    "
+  
+  control "SV-230265" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (3)) is not applied to this system categorization in CMS ARS 3.1'
   end
-
+  
+  control "SV-230266" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (3)) is not applied to this system categorization in CMS ARS 3.1'
+  end
 
   control "SV-230267" do
     impact 0.0
@@ -1674,6 +1648,11 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
   end
 
+  control "SV-230475" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-9 (3)) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
   control "SV-230479" do
     impact 0.0
     desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
@@ -1694,6 +1673,10 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
   end
 
+  control "SV-230483" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-5 (1)) is not applied to this system categorization in CMS ARS 3.1'
+  end
 
   control 'SV-230484' do
     title "RHEL 8 must securely compare internal information system clocks at
@@ -1929,6 +1912,12 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
     "
   end
+
+  control "SV-244543" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-5 (1)) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
 
   control 'SV-244544' do
     desc  "\"Firewalld\" provides an easy and effective way to block/limit remote
