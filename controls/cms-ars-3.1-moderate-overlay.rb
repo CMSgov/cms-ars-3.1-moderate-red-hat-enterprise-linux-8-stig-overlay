@@ -644,46 +644,20 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     desc 'caveat', 'This is Not Applicable since the related security control (CM-3 (5)) is not included in CMS ARS 3.1'
   end
 
-
-  control 'SV-230264' do
-    desc  "Changes to any software components can have significant effects on the
-  overall security of the operating system. This requirement ensures the software
-  has not been tampered with and that it has been provided by a trusted vendor.
-
-      Accordingly, patches, service packs, device drivers, or operating system
-  components must be signed with a certificate recognized and approved by the
-  organization.
-
-      Verifying the authenticity of the software prior to installation validates
-  the integrity of the patch or upgrade received from a vendor. This verifies the
-  software has not been tampered with and that it has been provided by a trusted
-  vendor. Self-signed certificates are disallowed by this requirement. The
-  operating system should not have to verify the software again. This requirement
-  does not mandate CMS certificates for this purpose; however, the certificate
-  used to verify the software must be from an approved CA.
-    "
+  control "SV-230264" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (3)) is not applied to this system categorization in CMS ARS 3.1'
   end
-
-
-  control 'SV-230265' do
-   desc  "Changes to any software components can have significant effects on the
-  overall security of the operating system. This requirement ensures the software
-  has not been tampered with and that it has been provided by a trusted vendor.
-
-      Accordingly, patches, service packs, device drivers, or operating system
-  components must be signed with a certificate recognized and approved by the
-  organization.
-
-      Verifying the authenticity of the software prior to installation validates
-  the integrity of the patch or upgrade received from a vendor. This verifies the
-  software has not been tampered with and that it has been provided by a trusted
-  vendor. Self-signed certificates are disallowed by this requirement. The
-  operating system should not have to verify the software again. This requirement
-  does not mandate CMS certificates for this purpose; however, the certificate
-  used to verify the software must be from an approved CA.
-    "
+  
+  control "SV-230265" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (3)) is not applied to this system categorization in CMS ARS 3.1'
   end
-
+  
+  control "SV-230266" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (CM-5 (3)) is not applied to this system categorization in CMS ARS 3.1'
+  end
 
   control "SV-230267" do
     impact 0.0
@@ -1066,7 +1040,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230334' do
     title "RHEL 8 must automatically lock an account when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc  'check', "
       Check that the system locks an account after five unsuccessful logon
   attempts within a period of 60 minutes with the following commands:
@@ -1123,7 +1097,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230335' do
     title "RHEL 8 must automatically lock an account when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc  'check', "
       Note: This check applies to RHEL versions 8.2 or newer, if the system is
   RHEL version 8.0 or 8.1, this check is not applicable.
@@ -1152,7 +1126,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230336' do
     title "RHEL 8 must automatically lock an account for 60 minutes when five unsuccessful logon attempts occur
-  during a 60-minute time period."
+  during a 120-minute time period."
     desc  'check', "
       Check that the system locks an account for 60 minutes after five unsuccessful logon
   attempts within a period of 60 minutes with
@@ -1208,7 +1182,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230337' do
     title "RHEL 8 must automatically lock an account for 60 minutes when five unsuccessful logon attempts occur
-  during a 60-minute time period."
+  during a 120-minute time period."
     desc  'check', "
       Note: This check applies to RHEL versions 8.2 or newer, if the system is
   RHEL version 8.0 or 8.1, this check is not applicable.
@@ -1296,7 +1270,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230344' do
     title "RHEL 8 must include root when automatically locking an account for 60 minutes when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc  'check', "
       Check that the system includes the root account when locking an account
   after five unsuccessful logon attempts within a period of 60 minutes with the
@@ -1350,7 +1324,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230345' do
     title "RHEL 8 must include root when automatically locking an account for 60 minutes when five unsuccessful
-  logon attempts occur during a 60-minute time period."
+  logon attempts occur during a 120-minute time period."
     desc 'fix', "
       Configure the operating system to include root when locking an account
   after five unsuccessful logon attempts occur in 60 minutes.
@@ -1362,6 +1336,10 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     "
   end
 
+  control "SV-230346" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AC-10) is not applied to this system categorization in CMS ARS 3.1'
+  end
 
   control 'SV-230353' do
     title "RHEL 8 must automatically lock command line user sessions after 30
@@ -1670,6 +1648,11 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
   end
 
+  control "SV-230475" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-9 (3)) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
   control "SV-230479" do
     impact 0.0
     desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
@@ -1690,6 +1673,10 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     desc 'caveat', 'This is Not Applicable since the related security control (AU-4 (1)) is not included in CMS ARS 3.1'
   end
 
+  control "SV-230483" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-5 (1)) is not applied to this system categorization in CMS ARS 3.1'
+  end
 
   control 'SV-230484' do
     title "RHEL 8 must securely compare internal information system clocks at
@@ -1925,6 +1912,12 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
     "
   end
+
+  control "SV-244543" do
+    impact 0.0
+    desc 'caveat', 'This is Not Applicable since the related security control (AU-5 (1)) is not applied to this system categorization in CMS ARS 3.1'
+  end
+
 
   control 'SV-244544' do
     desc  "\"Firewalld\" provides an easy and effective way to block/limit remote
