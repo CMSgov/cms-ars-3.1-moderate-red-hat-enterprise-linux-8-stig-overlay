@@ -1043,11 +1043,11 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   logon attempts occur during a 120-minute time period."
     desc  'check', "
       Check that the system locks an account after five unsuccessful logon
-  attempts within a period of 60 minutes with the following commands:
+  attempts within a period of 120 minutes with the following commands:
 
       Note: If the System Administrator demonstrates the use of an approved
   centralized account management method that locks an account after five
-  unsuccessful logon attempts within a period of 60 minutes, this requirement is
+  unsuccessful logon attempts within a period of 120 minutes, this requirement is
   not applicable.
 
       Note: This check applies to RHEL versions 8.0 and 8.1, if the system is
@@ -1103,7 +1103,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   RHEL version 8.0 or 8.1, this check is not applicable.
 
       Verify the \"/etc/security/faillock.conf\" file is configured to lock an
-  account after five unsuccessful logon attempts within 60 minutes:
+  account after five unsuccessful logon attempts within 120 minutes:
 
       $ sudo grep 'fail_interval =' /etc/security/faillock.conf
 
@@ -1114,7 +1114,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     "
     desc  'fix', "
       Configure the operating system to lock an account when five unsuccessful
-  logon attempts occur in 60 minutes.
+  logon attempts occur in 120 minutes.
 
       Add/Modify the \"/etc/security/faillock.conf\" file to match the following
   line:
@@ -1129,11 +1129,11 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   during a 120-minute time period."
     desc  'check', "
       Check that the system locks an account for 60 minutes after five unsuccessful logon
-  attempts within a period of 60 minutes with
+  attempts within a period of 120 minutes with
   the following commands:
 
       Note: If the System Administrator demonstrates the use of an approved
-  centralized account management method that locks an account for 60 minutes after five unsuccessful logon attempts within a period of 60 minutes, this requirement is
+  centralized account management method that locks an account for 60 minutes after five unsuccessful logon attempts within a period of 120 minutes, this requirement is
   not applicable.
 
       Note: This check applies to RHEL versions 8.0 and 8.1, if the system is
@@ -1162,7 +1162,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   these lines, this is a finding.
     "
     desc 'fix', "
-      Configure the operating system to lock an account for 60 minutes when five unsuccessful logon attempts occur in 60 minutes.
+      Configure the operating system to lock an account for 60 minutes when five unsuccessful logon attempts occur in 120 minutes.
 
       Add/Modify the appropriate sections of the \"/etc/pam.d/system-auth\" and
   \"/etc/pam.d/password-auth\" files to match the following lines:
@@ -1188,7 +1188,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   RHEL version 8.0 or 8.1, this check is not applicable.
 
       Verify the \"/etc/security/faillock.conf\" file is configured to lock an
-  account until released by an administrator after five unsuccessful logon
+  account for 60 minutes after five unsuccessful logon
   attempts:
 
       $ sudo grep 'unlock_time =' /etc/security/faillock.conf
@@ -1199,8 +1199,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   out, this is a finding.
     "
     desc 'fix', "
-      Configure the operating system to lock an account until released by an
-  administrator when five unsuccessful logon attempts occur in 60 minutes.
+      Configure the operating system to lock an account for 60 minutes when five unsuccessful logon attempts occur in 120 minutes.
 
       Add/Modify the \"/etc/security/faillock.conf\" file to match the following
   line:
@@ -1217,7 +1216,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   the user pertaining to logon information with the following commands:
 
       Note: If the System Administrator demonstrates the use of an approved
-  centralized account management method that locks an account after five unsuccessful logon attempts within a period of 60 minutes, this requirement is
+  centralized account management method that locks an account after five unsuccessful logon attempts within a period of 120 minutes, this requirement is
   not applicable.
 
       Note: This check applies to RHEL versions 8.0 and 8.1, if the system is
@@ -1273,13 +1272,13 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   logon attempts occur during a 120-minute time period."
     desc  'check', "
       Check that the system includes the root account when locking an account
-  after five unsuccessful logon attempts within a period of 60 minutes with the
+  after five unsuccessful logon attempts within a period of 120 minutes with the
   following commands:
 
       If the system is RHEL version 8.2 or newer, this check is not applicable.
 
       Note: If the System Administrator demonstrates the use of an approved
-  centralized account management method that locks an account after five unsuccessful logon attempts within a period of 60 minutes, this requirement is
+  centralized account management method that locks an account after five unsuccessful logon attempts within a period of 120 minutes, this requirement is
   not applicable.
 
       $ sudo grep pam_faillock.so /etc/pam.d/password-auth
@@ -1304,7 +1303,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     "
     desc 'fix', "
       Configure the operating system to include root when locking an account
-  after five unsuccessful logon attempts occur in 60 minutes.
+  after five unsuccessful logon attempts occur in 120 minutes.
 
       Add/Modify the appropriate sections of the \"/etc/pam.d/system-auth\" and
   \"/etc/pam.d/password-auth\" files to match the following lines:
@@ -1327,7 +1326,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   logon attempts occur during a 120-minute time period."
     desc 'fix', "
       Configure the operating system to include root when locking an account
-  after five unsuccessful logon attempts occur in 60 minutes.
+  after five unsuccessful logon attempts occur in 120 minutes.
 
       Add/Modify the \"/etc/security/faillock.conf\" file to match the following
   line:
