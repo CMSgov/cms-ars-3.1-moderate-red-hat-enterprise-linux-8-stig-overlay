@@ -920,28 +920,13 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   control 'SV-230332' do
     title "RHEL 8 must automatically lock an account when five unsuccessful
   logon attempts occur."
-    desc  "By limiting the number of failed logon attempts, the risk of
-  unauthorized system access via user password guessing, otherwise known as
-  brute-force attacks, is reduced. Limits are imposed by locking the account.
-
-      RHEL 8 can utilize the \"pam_faillock.so\" for this purpose. Note that
-  manual changes to the listed files may be overwritten by the \"authselect\"
-  program.
-
-      From \"Pam_Faillock\" man pages: Note that the default directory that
-  \"pam_faillock\" uses is usually cleared on system boot so the access will be
-  reenabled after system reboot. If that is undesirable a different tally
-  directory must be set with the \"dir\" option.
-
-
-    "
     desc  'check', "
       Check that the system locks an account after five unsuccessful logon
   attempts with the following commands:
 
       Note: If the System Administrator demonstrates the use of an approved
   centralized account management method that locks an account after five
-  unsuccessful logon attempts within a period of 60 minutes, this requirement is
+  unsuccessful logon attempts within a period of 120 minutes, this requirement is
   not applicable.
 
       Note: This check applies to RHEL versions 8.0 and 8.1, if the system is
@@ -998,7 +983,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   control 'SV-230333' do
     title "RHEL 8 must automatically lock an account when five unsuccessful
   logon attempts occur."
-
     desc  'check', "
       Note: This check applies to RHEL versions 8.2 or newer, if the system is
   RHEL version 8.0 or 8.1, this check is not applicable.
@@ -1022,19 +1006,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
       deny = 5
     "
-
-
-    if os.release.to_f <= 8.2
-      impact 0.0
-      describe "The release is #{os.release}" do
-        skip 'The release is lower than 8.2; this control is Not Applicable.'
-      end
-    else
-      describe parse_config_file('/etc/security/faillock.conf') do
-        its('deny') { should cmp <= 5 }
-        its('deny') { should_not cmp 0 }
-      end
-    end
   end
 
 
@@ -1471,17 +1442,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
       set -g lock-after-time 1800
     "
-
-    if virtualization.system.eql?('docker')
-      impact 0.0
-      describe "Control not applicable within a container" do
-        skip "Control not applicable within a container"
-      end
-    else
-      describe command("grep -i lock-after-time /etc/tmux.conf | cut -d ' ' -f4") do
-        its('stdout.strip') { should cmp <= 1800 }
-      end
-    end
   end
 
 
@@ -1525,10 +1485,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
       difok = 6
     "
-
-    describe parse_config_file('/etc/security/pwquality.conf') do
-      its('difok') { should cmp >= 6 }
-    end
   end
 
 
@@ -1564,7 +1520,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
 
   control 'SV-230369' do
-    title 'RHEL 8 passwords must have a minimum of 15 characters.'
     desc  "The shorter the password, the lower the number of possible
   combinations that need to be tested before the password is compromised.
 
@@ -1590,7 +1545,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
 
   control 'SV-230370' do
-    title 'RHEL 8 passwords for new users must have a minimum of 15 characters.'
     desc  "The shorter the password, the lower the number of possible
   combinations that need to be tested before the password is compromised.
 
@@ -1607,8 +1561,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
 
   control 'SV-230372' do
-    title "RHEL 8 must implement smart card logon for multifactor authentication
-  for access to interactive accounts."
     desc  "Using an authentication device, such as a PIV or
   token that is separate from the information system, ensures that even if the
   information system is compromised, that compromise will not affect credentials
@@ -1666,11 +1618,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
   \"-1\" will disable this feature, and \"0\" will disable the account
   immediately after the password expires.
     "
-    describe parse_config_file('/etc/default/useradd') do
-      its('INACTIVE') { should cmp >= 0 }
-      its('INACTIVE') { should cmp <= 60 }
-      its('INACTIVE') { should_not cmp == -1 }
-    end
   end
 
 
@@ -1879,7 +1826,6 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
 
     "
-    desc  'rationale', ''
   end
 
 
