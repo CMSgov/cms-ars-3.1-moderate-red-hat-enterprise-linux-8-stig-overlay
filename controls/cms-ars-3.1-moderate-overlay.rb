@@ -1208,6 +1208,63 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     "
   end
 
+  control 'SV-230338' do
+    desc  'check', "
+      Check that the faillock directory contents persists after a reboot with the
+  following commands:
+
+      Note: If the System Administrator demonstrates the use of an approved
+  centralized account management method that locks an account after five
+  unsuccessful logon attempts within a period of 120 minutes, this requirement is
+  not applicable.
+
+      Note: This check applies to RHEL versions 8.0 and 8.1, if the system is
+  RHEL version 8.2 or newer, this check is not applicable.
+
+      $ sudo grep pam_faillock.so /etc/pam.d/password-auth
+
+      auth required pam_faillock.so preauth dir=/var/log/faillock silent audit
+  deny=5 even_deny_root fail_interval=7200 unlock_time=3600
+      auth required pam_faillock.so authfail dir=/var/log/faillock unlock_time=3600
+      account required pam_faillock.so
+
+      If the \"dir\" option is not set to a non-default documented tally log
+  directory on the \"preauth\" and \"authfail\" lines with the
+  \"pam_faillock.so\" module, or is missing from these lines, this is a finding.
+
+      $ sudo grep pam_faillock.so /etc/pam.d/system-auth
+
+      auth required pam_faillock.so preauth dir=/var/log/faillock silent audit
+  deny=5 even_deny_root fail_interval=7200 unlock_time=3600
+      auth required pam_faillock.so authfail dir=/var/log/faillock unlock_time=3600
+      account required pam_faillock.so
+
+      If the \"dir\" option is not set to a non-default documented tally log
+  directory on the \"preauth\" and \"authfail\" lines with the
+  \"pam_faillock.so\" module, or is missing from these lines, this is a finding.
+    "
+    desc 'fix', "
+      Configure the operating system maintain the contents of the faillock
+  directory after a reboot.
+
+      Add/Modify the appropriate sections of the \"/etc/pam.d/system-auth\" and
+  \"/etc/pam.d/password-auth\" files to match the following lines:
+
+      Note: Using the default faillock directory of /var/run/faillock will result
+  in the contents being cleared in the event of a reboot.
+
+      auth required pam_faillock.so preauth dir=/var/log/faillock silent audit
+  deny=5 even_deny_root fail_interval=7200 unlock_time=3600
+      auth required pam_faillock.so authfail dir=/var/log/faillock unlock_time=3600
+      account required pam_faillock.so
+
+      The \"sssd\" service must be restarted for the changes to take effect. To
+  restart the \"sssd\" service, run the following command:
+
+      $ sudo systemctl restart sssd.service
+    "
+  end
+  
 
   control 'SV-230340' do
     title "RHEL 8 must prevent system messages from being presented when five unsuccessful logon attempts occur."
@@ -1264,6 +1321,57 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
 
   control 'SV-230341' do
     title "RHEL 8 must prevent system messages from being presented when five unsuccessful logon attempts occur."
+  end
+
+  control 'SV-230342' do
+    desc  'check', "
+      Check that the system logs user name information when unsuccessful logon
+  attempts occur with the following commands:
+
+      If the system is RHEL version 8.2 or newer, this check is not applicable.
+
+      Note: If the System Administrator demonstrates the use of an approved
+  centralized account management method that locks an account after five
+  unsuccessful logon attempts within a period of 120 minutes, this requirement is
+  not applicable.
+
+      $ sudo grep pam_faillock.so /etc/pam.d/password-auth
+
+      auth required pam_faillock.so preauth dir=/var/log/faillock silent audit
+  deny=5 even_deny_root fail_interval=7200 unlock_time=3600
+      auth required pam_faillock.so authfail dir=/var/log/faillock unlock_time=3600
+      account required pam_faillock.so
+
+      If the \"audit\" option is missing from the \"preauth\" line with the
+  \"pam_faillock.so\" module, this is a finding.
+
+      $ sudo grep pam_faillock.so /etc/pam.d/system-auth
+
+      auth required pam_faillock.so preauth dir=/var/log/faillock silent audit
+  deny=5 even_deny_root fail_interval=7200 unlock_time=3600
+      auth required pam_faillock.so authfail dir=/var/log/faillock unlock_time=3600
+      account required pam_faillock.so
+
+      If the \"audit\" option is missing from the \"preauth\" line with the
+  \"pam_faillock.so\" module, this is a finding.
+    "
+    desc 'fix', "
+      Configure the operating system to log user name information when
+  unsuccessful logon attempts occur.
+
+      Add/Modify the appropriate sections of the \"/etc/pam.d/system-auth\" and
+  \"/etc/pam.d/password-auth\" files to match the following lines:
+
+      auth required pam_faillock.so preauth dir=/var/log/faillock silent audit
+  deny=5 even_deny_root fail_interval=7200 unlock_time=3600
+      auth required pam_faillock.so authfail dir=/var/log/faillock unlock_time=3600
+      account required pam_faillock.so
+
+      The \"sssd\" service must be restarted for the changes to take effect. To
+  restart the \"sssd\" service, run the following command:
+
+      $ sudo systemctl restart sssd.service
+    "
   end
 
 
