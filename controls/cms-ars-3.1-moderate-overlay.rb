@@ -1048,7 +1048,7 @@ include_controls "redhat-enterprise-linux-8-stig-baseline" do
     "
     desc 'fix', "
       Configure the operating system to lock an account when five unsuccessful
-  logon attempts occur in 60 minutes.
+  logon attempts occur in 120 minutes.
 
       Add/Modify the appropriate sections of the \"/etc/pam.d/system-auth\" and
   \"/etc/pam.d/password-auth\" files to match the following lines:
