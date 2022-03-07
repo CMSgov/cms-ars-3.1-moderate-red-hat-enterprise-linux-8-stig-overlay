@@ -9,8 +9,17 @@ version: 1.3.5
 inspec_version: ">= 4.0"
 
 depends:
+# - name: redhat-enterprise-linux-8-stig-baseline
+#  path: base/redhat-enterprise-linux-8-stig-baseline-2.1.0
+  
 - name: redhat-enterprise-linux-8-stig-baseline
-  path: base/redhat-enterprise-linux-8-stig-baseline-2.1.0
+  git: https://github.com/CMSgov/cms-ars-3.1-moderate-red-hat-enterprise-linux-8-stig-overlay
+  branch:  temp_base
+#  tag:     desired_version
+#  commit:  pinned_commit
+#  version: semver_via_tags
+  relative_path: base/redhat-enterprise-linux-8-stig-baseline-2.1.0
+
 
 inputs:
 - name: banner_message_text_gui
