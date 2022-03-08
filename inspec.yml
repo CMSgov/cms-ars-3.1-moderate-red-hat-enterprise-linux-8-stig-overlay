@@ -10,7 +10,7 @@ inspec_version: ">= 4.0"
 
 depends:
 - name: redhat-enterprise-linux-8-stig-baseline
-  url: https://github.com/CMSgov/red-hat-enterprise-linux-8-stig-baseline/archive/v2.1.0.tar.gz
+  url: https://github.com/CMSgov/redhat-enterprise-linux-8-stig-baseline/archive/v2.1.0.tar.gz
 
 inputs:
 - name: banner_message_text_gui
